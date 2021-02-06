@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Bus Ticket Management System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<style>
+
+
+.footer {
+    font-size: 0.85rem;
+    padding: 20px 0;
+    line-height: 1.6;
+}
+
+.footer__text,
+.footer__link,
+.footer__title {
+    color: #aaaaaa;
+    padding: 3px 15px;
+    display: block;
+}
+
+.footer__hr {
+    height: 1px;
+    border: none;
+    background: #444444;
+}
+
+.footer__sections {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.footer__section {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 15px 0;
+    flex-shrink: 0;
+}
+
+.footer__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    color: #cccccc;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#wrapper{
+
+width:100%;
+height:48px;
+margin:48px;
+
+}
+.box{
+float:left;
+width:48px;
+height:48px;
+
+font-family:entypo;
+color:#212121;
+background:#fff;
+text-align:center;
+line-height:50%;
+font-family:20%;
+font-size:25px;
+display:block;
+cursor:pointer;
+margin:1%;
+transition:1s;
+}
+.box.hover{ 
+color:#fff;
+transform:scale(1.15);
+transition:1s;  
+}
+#facebook:hover{
+background-color:rgb(59,89,152);
+box-shadow:inset 0 0 0 22px #3A5795;
+transform:rotate(360deg) scale(1.15);
+transition:1s;
+}
+#twitter:hover{
+background-color:rgb(59,89,152);
+box-shadow:inset 0 0 0 22px #3A5795;
+transform:rotate(360deg) scale(1.15);
+transition:1s;
+}
+#google:hover{
+background-color:rgb(221,75,57);
+box-shadow:inset 0 0 0 22px #3A5795;
+transform:rotate(360deg) scale(1.15);
+transition:1s;
+}
+#linkedin:hover{
+background-color:rgb(0,123,181);
+box-shadow:inset 0 0 0 22px #3A5795;
+transform:rotate(360deg) scale(1.15);
+transition:1s;
+}
+}
+</style>
+
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                @Html.ActionLink("Bus Sheba", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <div>
+            <footer>
+
+                <div class="wrapper">
+
+
+                    <div class="footer__sections container">
+                        <div class="footer__section">
+                            <span class="footer__title">Find Out More</span>
+                      
+                                <a href="https://localhost:44335/Home/About" class="footer__link">About Us</a>
+                                <a href="https://localhost:44335/Home/Contact" class="footer__link">Contact Us</a>
+                                <a href="#" class="footer__link">Terms of Use</a>
+                                <a href="#" class="footer__link">Privacy Policy</a>
+                        </div>
+                        <div class="footer__section">
+                            <span class="footer__title">More</span>
+                            <a href="#" class="footer__link">Low fare tips</a>
+                            <a href="#" class="footer__link">Badges and certificates</a>
+                        </div>
+                        <div class="footer__section">
+                            <span class="footer__title">Support Us</span>
+                            <a href="#" class="footer__link">Facebook</a>
+                            <a href="#" class="footer__link">Gmail</a>
+                            <a href="#" class="footer__link">Instagram</a>
+                            <a href="#" class="footer__link">Twitter</a>
+                            <a href="#" class="footer__link">Linkedin</a>
+                        </div>
+                        <div class="footer__section">
+                            <span class="footer__title">Follow Us Online!</span>
+                          
+                            <i class="box" id="facebook"><img src="~/Image/facebook.jpg"></i>
+                            <i class="box" id="twitter"><img src="~/Image/twitter.jpg"></i>
+                            <i class="box" id="google"><img src="~/Image/google1.jpg"></i>
+                            <i class="box" id="linkedin"><img src="~/Image/linkedin.jpg"></i>
+                         
+                        </div>
+    </div>
+    </footer>
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
